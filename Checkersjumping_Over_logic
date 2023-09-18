@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.List;
+//each piece being black white or king piece
+
+	boolean isBlack = (id == Board.BLACK_CHECKER || id == Board.BLACK_KING);
+		List<Point> check = new ArrayList<>();
+{
+    			boolean isWhite = (tid == Board.WHITE_CHECKER ||
+					tid == Board.WHITE_KING);
+			if (isBlack && !isWhite) {
+				continue;
+			}
+			boolean isKing = (tid == Board.BLACK_KING || tid == Board.BLACK_KING);
+{
+    // code for jumping over a piece
+         if(tileToJumpTo==board[x][y] && board[x][y].getIcon()==null && board[x][y].getBackground()==Color.black)
+                                {
+                                    JOptionPane.showMessageDialog(null, "Please choose a valid place to jump to.");
+                                }
+      else if(tileToJumpTo==board[x][y] && board[x-1][y+1].getIcon()==b)
+                                {
+                                    board[x][y].setIcon(r);
+                                    turn1=false;
+                                    turn2=true;
+                                    board[x][y].setBackground(Color.red);
+                                    board[x-1][y+1].setIcon(null);
+                                }
+      if(count == 1)
+                                    {
+                                        JOptionPane.showMessageDialog(null, "You really should click on a piece if you want to move.");
+                                        count = 0;
+                                    }
+                                    else
+                                    {
+                                        board[x][y].setIcon(r);
+                                        turn1=false;
+                                        turn2=true;
+                                        board[x][y].setBackground(Color.red);
+                                        board[x+2][y].setBackground(Color.red);
+                                        board[x-2][y].setBackground(Color.red);
+                                        count = 0;
+                                    }
+                                }
+          }
