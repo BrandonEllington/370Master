@@ -25,12 +25,22 @@ import java.util.List;
                                     board[x][y].setBackground(Color.red);
                                     board[x-1][y+1].setIcon(null);
                                 }
-      if(count == 1)
-                                    {
-                                        JOptionPane.showMessageDialog(null, "You really should click on a piece if you want to move.");
-                                        count = 0;
-                                    }
-                                    else
+{ 
+if adjacent tile is not occupied:
+     move current piece to adjacent tile
+
+else:
+do:
+  if current adjacent tile is occupied by the enemy AND
+     check if a tile is free in the same direction:
+       mark enemy piece for removal // queue it up to process after 
+       additional logic goes here, like keeping track of where the piece moves to
+       valid move has been found
+  if not:
+     move is invalid
+
+while( valid move has been found )
+}
                                     {
                                         board[x][y].setIcon(r);
                                         turn1=false;
